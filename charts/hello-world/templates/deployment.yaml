@@ -19,7 +19,7 @@ spec:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: hello-world
-          image: 'nginx:{{ .Release.appVersion }}'
+          image: 'nginx:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

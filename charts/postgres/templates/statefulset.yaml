@@ -20,7 +20,7 @@ spec:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: postgres
-          image: "tensorchord/pgvecto-rs:{{ .Release.appVersion }}"
+          image: 'tensorchord/pgvecto-rs:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432

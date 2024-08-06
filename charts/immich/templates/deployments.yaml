@@ -19,7 +19,7 @@ spec:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: immich-server
-          image: 'ghcr.io/immich-app/immich-server:{{ .Release.appVersion }}'
+          image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
@@ -82,7 +82,7 @@ spec:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: immich-microservices
-          image: 'ghcr.io/immich-app/immich-server:{{ .Release.appVersion }}'
+          image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           command:
             - './start.sh'
@@ -142,7 +142,7 @@ spec:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: immich-machine-learning
-          image: 'ghcr.io/immich-app/immich-machine-learning:{{ .Release.appVersion }}'
+          image: 'ghcr.io/immich-app/immich-machine-learning:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003
