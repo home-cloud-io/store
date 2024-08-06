@@ -1,0 +1,38 @@
+apiVersion: v1
+entries:
+  hello-world:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-06T20:19:57.478212119Z"
+    description: A simple "Hello World" application demonstration Home Cloud apps.
+    digest: 17578c24e5482b1c7c0f4545bad4079924c0b66e458b8e5ce7710142b1b48c5b
+    name: hello-world
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
+    version: 0.0.2
+  immich:
+  - apiVersion: v2
+    appVersion: v1.101.0
+    created: "2024-08-06T20:19:57.605178302Z"
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: cfded49d0397628a3c6ccf293fd4fba0cae0297a8623d1f0e62022b08c4cf40a
+    name: immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.2/immich-0.0.2.tgz
+    version: 0.0.2
+  postgres:
+  - apiVersion: v2
+    appVersion: pg15-v0.2.0
+    created: "2024-08-06T20:19:57.750266547Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: 2dd5eacea2712e1d832097f4bf0367b610c7fc2b3cf561eb364bbb0ca5645662
+    name: postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
+    version: 0.0.2
+generated: "2024-08-06T20:19:57.750281095Z"
