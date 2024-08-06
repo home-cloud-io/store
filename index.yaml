@@ -3,6 +3,16 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-08-06T22:02:50.651560932Z"
+    description: A simple "Hello World" application demonstration Home Cloud apps.
+    digest: fff66964ce92ca2d68a8840f70971d994925f8c071e66d9ba930091c7b8c60dc
+    name: hello-world
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.4/hello-world-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-08-06T21:52:46.29244011Z"
     description: A simple "Hello World" application demonstration Home Cloud apps.
     digest: 25d9187d0b2e6b456edbf4c03731310ea9647fda531c7de78b86065adc0f5afa
@@ -22,6 +32,17 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   immich:
+  - apiVersion: v2
+    appVersion: v1.101.0
+    created: "2024-08-06T22:02:50.828869456Z"
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: 46e41fb656882e35f0126490b9c3de44a806806f1da9ec0cae104381934ca056
+    name: immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.4/immich-0.0.4.tgz
+    version: 0.0.4
   - apiVersion: v2
     appVersion: v1.101.0
     created: "2024-08-06T21:52:46.411079282Z"
@@ -47,6 +68,17 @@ entries:
   postgres:
   - apiVersion: v2
     appVersion: pg15-v0.2.0
+    created: "2024-08-06T22:02:51.010416337Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: 8f1024074000a36d40f50f70ac02e6e0435e443be487031151b22ed1cd123316
+    name: postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.4/postgres-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: pg15-v0.2.0
     created: "2024-08-06T21:52:46.52253332Z"
     description: PostgreSQL is a powerful, open source object-relational database
       (with pgvecto.rs installed).
@@ -67,4 +99,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-08-06T21:52:46.52254955Z"
+generated: "2024-08-06T22:02:51.010453607Z"
