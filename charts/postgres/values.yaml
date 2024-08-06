@@ -8,5 +8,6 @@ homeCloud:
       keys:
         - name: password
           length: 24
+          noSpecialCharacters: true
       # a secret will be created called `postgres` with a key called `password`
       # and a random value (which will persist between system reboots)
