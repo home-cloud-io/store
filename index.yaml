@@ -68,6 +68,17 @@ entries:
   postgres:
   - apiVersion: v2
     appVersion: pg15-v0.2.0
+    created: "2024-08-06T23:29:00.945911578Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: f416a2e62776338f1fb689f3d8f4405bd30b19dc68095a4489d077559821cdad
+    name: postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.6/postgres-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: pg15-v0.2.0
     created: "2024-08-06T22:43:43.307536398Z"
     description: PostgreSQL is a powerful, open source object-relational database
       (with pgvecto.rs installed).
@@ -110,4 +121,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-08-06T22:43:43.307583336Z"
+generated: "2024-08-06T23:29:00.945940962Z"
