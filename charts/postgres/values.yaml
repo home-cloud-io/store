@@ -1,0 +1,13 @@
+homeCloud:
+  namespace: postgres
+
+  persistence:
+    - name: postgres
+      size: 32Gi
+
+  secrets:
+    - name: postgres
+      keys:
+        - name: password
+      # a secret will be created called `postgres` with a key called `password`
+      # and a random value (which will persist between system reboots)

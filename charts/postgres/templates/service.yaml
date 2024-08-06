@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgres
+  namespace: {{ .Values.homeCloud.namespace }}
+spec:
+  ports:
+  - name: postgres
+    port: 5432
+  selector:
+    app: postgres

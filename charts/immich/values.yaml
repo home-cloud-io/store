@@ -1,0 +1,56 @@
+homeCloud:
+  namespace: immich
+
+  # NOTE: this will be set by the operator
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - home-cloud
+
+  routes:
+    - name: photos
+      service:
+        name: server
+        port: 3001
+      # a externally accessible route will be established enabling connection
+      # to the service (on port 3001) by going to http://photos.home-cloud.local
+
+  databases:
+    - name: immich
+      type: postgres
+      # a secret will be created called `postgres-immich` with the values
+      # hostname: ***
+      # database: immich
+      # username: immich
+      # password: ***
+      # port: 5432
+      # uri: postgres://immich:***@***:5432/immich
+      # you can inject these values into your containers using environment variables
+      # env:
+      #   - name: DB_PASSWORD
+      #       valueFrom:
+      #         secretKeyRef:
+      #           name: postgres-immich
+      #           key: password
+
+  persistence:
+    - name: immich
+      size: 64Gi
+      # a persistent volume claim (PVC) called `immich` will be created
+      # you can mount it to your containers
+      # containers:
+      #   - name: immich-server
+      #     image: ghcr.io/immich-app/immich-server
+      #     volumeMounts:
+      #       - name: uploads
+      #         mountPath: /usr/src/app/upload
+      # volumes:
+      #   - name: uploads
+      #     persistentVolumeClaim:
+      #       claimName: immich
+    - name: immich-model-cache
+      size: 8Gi

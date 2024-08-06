@@ -1,0 +1,183 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: immich-server
+  namespace: {{ .Values.homeCloud.namespace }}
+  labels:
+    app: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: immich-server
+          image: 'ghcr.io/immich-app/immich-server:{{ .Release.appVersion }}'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3001
+              name: http
+          command:
+            - './start.sh'
+          args:
+            - 'immich'
+          env:
+            - name: DB_HOSTNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: hostname
+            - name: DB_DATABASE_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: database
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: password
+            - name: REDIS_HOSTNAME
+              value: redis
+            - name: IMMICH_MACHINE_LEARNING_URL
+              value: http://machine-learning:3003
+          volumeMounts:
+            - name: uploads
+              mountPath: /usr/src/app/upload
+      volumes:
+        - name: uploads
+          persistentVolumeClaim:
+            claimName: immich
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservices
+  namespace: {{ .Values.homeCloud.namespace }}
+  labels:
+    app: server-microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server-microservices
+  template:
+    metadata:
+      labels:
+        app: server-microservices
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: immich-microservices
+          image: 'ghcr.io/immich-app/immich-server:{{ .Release.appVersion }}'
+          imagePullPolicy: IfNotPresent
+          command:
+            - './start.sh'
+          args:
+            - 'microservices'
+          env:
+            - name: DB_HOSTNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: hostname
+            - name: DB_DATABASE_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: database
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-immich
+                  key: password
+            - name: REDIS_HOSTNAME
+              value: redis
+            - name: IMMICH_MACHINE_LEARNING_URL
+              value: http://machine-learning:3003
+          volumeMounts:
+            - name: uploads
+              mountPath: /usr/src/app/upload
+      volumes:
+        - name: uploads
+          persistentVolumeClaim:
+            claimName: immich
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machine-learning
+  namespace: {{ .Values.homeCloud.namespace }}
+  labels:
+    app: machine-learning
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: machine-learning
+  template:
+    metadata:
+      labels:
+        app: machine-learning
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: immich-machine-learning
+          image: 'ghcr.io/immich-app/immich-machine-learning:{{ .Release.appVersion }}'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3003
+              name: http
+          volumeMounts:
+            - name: model-cache
+              mountPath: /cache
+      volumes:
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: immich-model-cache
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  namespace: {{ .Values.homeCloud.namespace }}
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: redis
+          image: redis:6.2.5-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 6379
+              name: redis

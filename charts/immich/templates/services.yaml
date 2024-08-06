@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: server
+  namespace: {{ .Values.homeCloud.namespace }}
+spec:
+  ports:
+    - name: http
+      port: 3001
+  selector:
+    app: server
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: machine-learning
+  namespace: {{ .Values.homeCloud.namespace }}
+spec:
+  ports:
+    - name: http
+      port: 3003
+  selector:
+    app: machine-learning
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: redis
+  namespace: {{ .Values.homeCloud.namespace }}
+spec:
+  ports:
+    - name: redis
+      port: 6379
+  selector:
+    app: redis
