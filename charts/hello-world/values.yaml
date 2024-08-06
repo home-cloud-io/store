@@ -1,8 +1,6 @@
 replicaCount: 1
 
 homeCloud:
-  namespace: hello-world
-
   routes:
     - name: hello
       service:

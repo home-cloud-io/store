@@ -1,6 +1,4 @@
 homeCloud:
-  namespace: postgres
-
   persistence:
     - name: postgres
       size: 32Gi

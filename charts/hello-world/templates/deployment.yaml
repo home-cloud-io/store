@@ -4,7 +4,7 @@ metadata:
   name: hello-world
   labels:
     app: hello-world
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

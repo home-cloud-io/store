@@ -1,6 +1,4 @@
 homeCloud:
-  namespace: immich
-
   # NOTE: this will be set by the operator
   nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:

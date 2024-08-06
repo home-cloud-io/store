@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: immich-server
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
   labels:
     app: server
 spec:
@@ -65,7 +65,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: microservices
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
   labels:
     app: server-microservices
 spec:
@@ -125,7 +125,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: machine-learning
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
   labels:
     app: machine-learning
 spec:
@@ -159,7 +159,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
   labels:
     app: redis
 spec:

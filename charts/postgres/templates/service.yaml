@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: postgres
-  namespace: {{ .Values.homeCloud.namespace }}
+  namespace: {{ .Release.Name }}
 spec:
   ports:
   - name: postgres
