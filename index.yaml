@@ -34,6 +34,17 @@ entries:
   immich:
   - apiVersion: v2
     appVersion: v1.101.0
+    created: "2024-08-07T03:47:02.27995818Z"
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: a30980c9460cdcfe21b2d16d3da4dfa3e8968f8d9d65e0766361e7768f7cbb2d
+    name: immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.5/immich-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: v1.101.0
     created: "2024-08-06T22:02:50.828869456Z"
     description: Immich is a high performance self-hosted photo and video management
       solution.
@@ -121,4 +132,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-08-06T23:29:00.945940962Z"
+generated: "2024-08-07T03:47:02.28003367Z"
