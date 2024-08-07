@@ -1,20 +1,10 @@
 homeCloud:
-  # NOTE: this will be set by the operator
-  nodeAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-                - home-cloud
-
   routes:
     - name: photos
       service:
         name: server
         port: 3001
-      # a externally accessible route will be established enabling connection
+      # an externally accessible route will be established enabling connection
       # to the service (on port 3001) by going to http://photos.home-cloud.local
 
   databases:
