@@ -18,17 +18,15 @@ spec:
       affinity:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
-        - name: immich-server
+        - name: server
           image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
               name: http
-          command:
-            - './start.sh'
-          args:
-            - 'immich'
           env:
+            - name: IMMICH_WORKERS_INCLUDE
+              value: 'api'
             - name: DB_HOSTNAME
               valueFrom:
                 secretKeyRef:
@@ -52,12 +50,12 @@ spec:
             - name: REDIS_HOSTNAME
               value: redis
             - name: IMMICH_MACHINE_LEARNING_URL
-              value: http://machine-learning:3003
+              value: 'http://machine-learning:3003'
           volumeMounts:
-            - name: uploads
+            - name: data
               mountPath: /usr/src/app/upload
       volumes:
-        - name: uploads
+        - name: data
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-data
 ---
@@ -67,28 +65,26 @@ metadata:
   name: microservices
   namespace: {{ .Release.Name }}
   labels:
-    app: server-microservices
+    app: microservices
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: server-microservices
+      app: microservices
   template:
     metadata:
       labels:
-        app: server-microservices
+        app: microservices
     spec:
       affinity:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
-        - name: immich-microservices
+        - name: microservices
           image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
-          command:
-            - './start.sh'
-          args:
-            - 'microservices'
           env:
+            - name: IMMICH_WORKERS_EXCLUDE
+              value: 'api'
             - name: DB_HOSTNAME
               valueFrom:
                 secretKeyRef:
@@ -112,7 +108,7 @@ spec:
             - name: REDIS_HOSTNAME
               value: redis
             - name: IMMICH_MACHINE_LEARNING_URL
-              value: http://machine-learning:3003
+              value: 'http://machine-learning:3003'
           volumeMounts:
             - name: uploads
               mountPath: /usr/src/app/upload
@@ -141,7 +137,7 @@ spec:
       affinity:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
-        - name: immich-machine-learning
+        - name: machine-learning
           image: 'ghcr.io/immich-app/immich-machine-learning:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
