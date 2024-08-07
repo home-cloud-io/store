@@ -25,95 +25,16 @@ spec:
             - containerPort: 3001
               name: http
           env:
-            - name: IMMICH_WORKERS_INCLUDE
-              value: 'api'
-            - name: DB_HOSTNAME
+            - name: DB_URL
               valueFrom:
                 secretKeyRef:
                   name: postgres-immich
-                  key: hostname
-            - name: DB_DATABASE_NAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: database
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: username
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: password
-            - name: REDIS_HOSTNAME
-              value: redis
-            - name: IMMICH_MACHINE_LEARNING_URL
-              value: 'http://machine-learning:3003'
+                  key: uri
           volumeMounts:
             - name: data
               mountPath: /usr/src/app/upload
       volumes:
         - name: data
-          persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-data
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: microservices
-  namespace: {{ .Release.Name }}
-  labels:
-    app: microservices
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: microservices
-  template:
-    metadata:
-      labels:
-        app: microservices
-    spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
-      containers:
-        - name: microservices
-          image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
-          imagePullPolicy: IfNotPresent
-          env:
-            - name: IMMICH_WORKERS_EXCLUDE
-              value: 'api'
-            - name: DB_HOSTNAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: hostname
-            - name: DB_DATABASE_NAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: database
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: username
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-immich
-                  key: password
-            - name: REDIS_HOSTNAME
-              value: redis
-            - name: IMMICH_MACHINE_LEARNING_URL
-              value: 'http://machine-learning:3003'
-          volumeMounts:
-            - name: uploads
-              mountPath: /usr/src/app/upload
-      volumes:
-        - name: uploads
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-data
 ---
