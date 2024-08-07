@@ -20,6 +20,14 @@ homeCloud:
   databases:
     - name: immich
       type: postgres
+      # the below SQL will be executed in the database at application install
+      # it will be run by the superuser of the database
+      init: |
+        CREATE EXTENSION IF NOT EXISTS vectors;
+        CREATE EXTENSION IF NOT EXISTS earthdistance CASCADE;
+        ALTER DATABASE immich SET search_path TO "$user", public, vectors;
+        ALTER SCHEMA vectors OWNER TO immich;
+        GRANT SELECT ON TABLE pg_vector_index_stat TO immich;
       # a secret will be created called `postgres-immich` with the values
       # hostname: ***
       # database: immich
