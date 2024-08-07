@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: immich-server
+  name: server
   namespace: {{ .Release.Name }}
   labels:
     app: server
