@@ -36,7 +36,7 @@ homeCloud:
       #           key: password
 
   persistence:
-    - name: immich
+    - name: data
       size: 64Gi
       # a persistent volume claim (PVC) called `immich` will be created
       # you can mount it to your containers
@@ -50,5 +50,5 @@ homeCloud:
       #   - name: uploads
       #     persistentVolumeClaim:
       #       claimName: immich
-    - name: immich-model-cache
+    - name: model-cache
       size: 8Gi
