@@ -30,6 +30,8 @@ spec:
                 secretKeyRef:
                   name: postgres-immich
                   key: uri
+            - name: REDIS_PORT
+              value: "6379"
           volumeMounts:
             - name: data
               mountPath: /usr/src/app/upload
@@ -64,6 +66,9 @@ spec:
           ports:
             - containerPort: 3003
               name: http
+          env:
+            - name: MACHINE_LEARNING_PORT
+              value: "3003"
           volumeMounts:
             - name: model-cache
               mountPath: /cache
