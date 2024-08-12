@@ -2,5 +2,6 @@ apiVersion: v2
 name: hello-world
 description: A simple "Hello World" application demonstration Home Cloud apps.
 type: application
-version: 0.0.4
+version: 0.0.5
 appVersion: "1.16.0"
+icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
