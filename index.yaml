@@ -3,6 +3,17 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-08-12T20:01:29.926333761Z"
+    description: A simple "Hello World" application demonstration Home Cloud apps.
+    digest: 62dbef7992b38a35aa7a891a52bd578f929480ed25b37f82c0b09af0451ae94f
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.5/hello-world-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-08-06T22:02:50.651560932Z"
     description: A simple "Hello World" application demonstration Home Cloud apps.
     digest: fff66964ce92ca2d68a8840f70971d994925f8c071e66d9ba930091c7b8c60dc
@@ -32,6 +43,18 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   immich:
+  - apiVersion: v2
+    appVersion: v1.110.0
+    created: "2024-08-12T20:01:30.038377283Z"
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: fd90a3895b8866fd69df02a10033bfd38a4a3fec144e62a556efb47e8155e4cf
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.12/immich-0.0.12.tgz
+    version: 0.0.12
   - apiVersion: v2
     appVersion: v1.110.0
     created: "2024-08-07T05:04:50.952474256Z"
@@ -145,6 +168,18 @@ entries:
   postgres:
   - apiVersion: v2
     appVersion: pg15-v0.2.0
+    created: "2024-08-12T20:01:30.167526546Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: ec259a1d1ba2da5fb5659ec7d0cd7905f8cb3cdc496a79aad4b0c2696ac4330a
+    icon: https://avatars.githubusercontent.com/u/177543?s=48&v=4
+    name: postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.7/postgres-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: pg15-v0.2.0
     created: "2024-08-06T23:29:00.945911578Z"
     description: PostgreSQL is a powerful, open source object-relational database
       (with pgvecto.rs installed).
@@ -198,4 +233,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-08-07T05:04:50.952520722Z"
+generated: "2024-08-12T20:01:30.167617375Z"
