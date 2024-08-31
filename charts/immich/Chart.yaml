@@ -7,6 +7,6 @@ appVersion: "v1.113.0"
 icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
 dependencies:
   - name: postgres
-    version: latest
+    version: 0.x.x
     repository: https://apps.home-cloud.io
     condition: homeCloud.dependencies.postgres.install
