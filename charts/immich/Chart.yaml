@@ -2,6 +2,11 @@ apiVersion: v2
 name: immich
 description: Immich is a high performance self-hosted photo and video management solution.
 type: application
-version: 0.0.12
-appVersion: "v1.110.0"
+version: 0.0.13
+appVersion: "v1.113.0"
 icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+dependencies:
+  - name: postgres
+    version: latest
+    repository: https://apps.home-cloud.io
+    condition: homeCloud.dependencies.postgres.install

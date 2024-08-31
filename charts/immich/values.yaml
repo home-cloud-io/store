@@ -50,3 +50,7 @@ homeCloud:
       #       claimName: immich
     - name: model-cache
       size: 8Gi
+
+  dependencies:
+    postgres:
+      install: false
