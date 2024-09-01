@@ -1,7 +1,12 @@
 apiVersion: v2
-name: Hello World
+name: hello-world
 description: A simple "Hello World" application demonstrating a Home Cloud app.
-type: application
-version: 0.0.6
-appVersion: "1.16.0"
 icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+type: application
+version: 0.0.7
+appVersion: "1.16.0"
+home: https://nginx.org/
+sources:
+  - https://github.com/nginx/nginx
+annotations:
+  displayName: Hello World

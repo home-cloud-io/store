@@ -1,7 +1,12 @@
 apiVersion: v2
-name: PostgreSQL
+name: postgres
 description: PostgreSQL is a powerful, open source object-relational database (with pgvecto.rs installed).
-type: application
-version: 0.0.8
-appVersion: "pg15-v0.2.0"
 icon: https://avatars.githubusercontent.com/u/177543?s=48&v=4
+type: application
+version: 0.0.9
+appVersion: pg15-v0.2.0
+home: https://www.postgresql.org/
+sources:
+  - https://github.com/postgres/postgres
+annotations:
+  displayName: PostgreSQL
