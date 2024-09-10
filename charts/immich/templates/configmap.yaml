@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: immich
+  namespace: {{ .Release.Name }}
+data:
+  immich.json: |
+    {
+      "newVersionCheck": {
+        "enabled": true
+      },
+      "server": {
+        "externalDomain": "http://photos.local"
+      }
+    }

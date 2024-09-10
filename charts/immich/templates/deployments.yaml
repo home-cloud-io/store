@@ -32,13 +32,21 @@ spec:
                   key: uri
             - name: REDIS_PORT
               value: "6379"
+            - name: IMMICH_CONFIG_FILE
+              value: /etc/immich.json
           volumeMounts:
             - name: data
               mountPath: /usr/src/app/upload
+            - name: config
+              mountPath: /etc/immich.json
+              subPath: immich.json
       volumes:
         - name: data
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-data
+        - name: config
+          configMap:
+            name: immich
 ---
 apiVersion: apps/v1
 kind: Deployment
