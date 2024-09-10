@@ -7,7 +7,7 @@ data:
   immich.json: |
     {
       "newVersionCheck": {
-        "enabled": true
+        "enabled": false
       },
       "server": {
         "externalDomain": "http://photos.local"
