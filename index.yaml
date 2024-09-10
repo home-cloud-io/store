@@ -5,6 +5,22 @@ entries:
       displayName: Hello World
     apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-09-10T04:25:01.75915043Z"
+    description: A simple "Hello World" application demonstrating a Home Cloud app.
+    digest: 1f3297c6a98903911160c11063f65df80e67491ea7ed4fda7798b853e86194bb
+    home: https://nginx.org/
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    sources:
+    - https://github.com/nginx/nginx
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.9/hello-world-0.0.9.tgz
+    version: 0.0.9
+  - annotations:
+      displayName: Hello World
+    apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-09-02T19:56:08.75197293Z"
     description: A simple "Hello World" application demonstrating a Home Cloud app.
     digest: b36141226a8dc33abc870fa0dbed6b2f3321da828edab2226af0fe7f682668aa
@@ -75,6 +91,28 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   immich:
+  - annotations:
+      displayName: Immich
+    apiVersion: v2
+    appVersion: v1.113.0
+    created: "2024-09-10T04:25:01.957669393Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: 5730fc3a807bae68b192555465791603c5b3fdb2d120ebfb184b343e08b36332
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.17/immich-0.0.17.tgz
+    version: 0.0.17
   - annotations:
       displayName: Immich
     apiVersion: v2
@@ -360,4 +398,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-02T19:56:08.870688424Z"
+generated: "2024-09-10T04:25:01.957826118Z"
