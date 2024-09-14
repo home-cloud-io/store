@@ -5,6 +5,22 @@ entries:
       displayName: Hello World
     apiVersion: v2
     appVersion: 1.27.1
+    created: "2024-09-14T03:30:54.566295031Z"
+    description: A simple "Hello World" application demonstrating a Home Cloud app.
+    digest: ef5083b5212783a391b294335c9243bd6f1a037d89488a502cd7e82d79a2bf69
+    home: https://nginx.org/
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    sources:
+    - https://github.com/nginx/nginx
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.11/hello-world-0.0.11.tgz
+    version: 0.0.11
+  - annotations:
+      displayName: Hello World
+    apiVersion: v2
+    appVersion: 1.27.1
     created: "2024-09-11T03:46:45.412901122Z"
     description: A simple "Hello World" application demonstrating a Home Cloud app.
     digest: 3d47cffe9dbd4ba1ad1008ef83d842899698226651e68bc36966e1086f49cc78
@@ -480,4 +496,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-11T03:46:45.413016686Z"
+generated: "2024-09-14T03:30:54.566414816Z"
