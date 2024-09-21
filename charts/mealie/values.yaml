@@ -1,0 +1,14 @@
+config:
+  timezone: America/Chicago
+  allowSignup: false
+
+homeCloud:
+  routes:
+    - name: recipes
+      service:
+        name: mealie
+        port: 9000
+
+  persistence:
+    - name: data
+      size: 4Gi

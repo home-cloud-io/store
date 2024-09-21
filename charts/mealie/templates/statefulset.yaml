@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mealie
+  namespace: {{ .Release.Name }}
+  labels:
+    app: mealie
+spec:
+  serviceName: mealie
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mealie
+  template:
+    metadata:
+      labels:
+        app: mealie
+    spec:
+      affinity:
+        nodeAffinity:  {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: mealie
+          image: ghcr.io/mealie-recipes/mealie:{{ .Chart.AppVersion }}
+          imagePullPolicy: 'IfNotPresent'
+          ports:
+            - containerPort: 9000
+          envFrom:
+            - configMapRef:
+                name: mealie
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-mealie
+                  key: username
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-mealie
+                  key: password
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-mealie
+                  key: database
+            - name: POSTGRES_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-mealie
+                  key: hostname
+          volumeMounts:
+            - mountPath: /app/data
+              name: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-data

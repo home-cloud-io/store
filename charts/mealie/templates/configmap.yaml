@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mealie
+  namespace: {{ .Release.Name }}
+data:
+  ALLOW_SIGNUP: '{{ .Values.config.allowSignup }}'
+  PUID: '1000'
+  PGID: '1000'
+  TZ: {{ .Values.config.timezone }}
+  MAX_WORKERS: '1'
+  WEB_CONCURRENCY: '1'
+  {{- with (first .Values.homeCloud.routes) }}
+  BASE_URL: http://{{ .name }}.local
+  {{- end }}
+  DB_ENGINE: postgres
