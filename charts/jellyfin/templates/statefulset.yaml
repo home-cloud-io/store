@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: jellyfin
+  namespace: {{ .Release.Name }}
+  labels:
+    app: jellyfin
+spec:
+  serviceName: jellyfin
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jellyfin
+  template:
+    metadata:
+      labels:
+        app: jellyfin
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: jellyfin
+          image: 'jellyfin/jellyfin:{{ .Chart.AppVersion }}'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8096
+          env:
+            {{- with (first .Values.homeCloud.routes) }}
+            - name: JELLYFIN_PublishedServerUrl
+              value: http://{{ .name }}.local
+            {{- end }}
+          volumeMounts:
+            - mountPath: /config
+              subPath: ./config
+              name: data
+            - mountPath: /cache
+              subPath: ./cache
+              name: data
+            - mountPath: /media
+              subPath: ./media
+              name: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-data

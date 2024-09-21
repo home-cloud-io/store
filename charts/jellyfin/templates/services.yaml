@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jellyfin
+  namespace: {{ .Release.Name }}
+spec:
+  ports:
+    - name: http
+      port: 8096
+  selector:
+    app: jellyfin

@@ -1,0 +1,10 @@
+homeCloud:
+  routes:
+    - name: movies
+      service:
+        name: jellyfin
+        port: 8096
+
+  persistence:
+    - name: data
+      size: 64Gi
