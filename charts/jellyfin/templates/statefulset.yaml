@@ -31,15 +31,18 @@ spec:
             {{- end }}
           volumeMounts:
             - mountPath: /config
-              subPath: ./config
-              name: data
+              name: config
             - mountPath: /cache
-              subPath: ./cache
-              name: data
+              name: cache
             - mountPath: /media
-              subPath: ./media
-              name: data
+              name: media
       volumes:
-        - name: data
+        - name: config
           persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-data
+            claimName: {{ .Release.Name }}-config
+        - name: cache
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-cache
+        - name: media
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-media
