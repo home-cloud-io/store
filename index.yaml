@@ -421,6 +421,23 @@ entries:
       displayName: Jellyfin
     apiVersion: v2
     appVersion: 10.9.11
+    created: "2024-09-21T03:48:25.404579564Z"
+    description: Jellyfin is the volunteer-built media solution that puts you in control
+      of your media.
+    digest: 2e3310ae24fd7dbbd1c319ab1d8725471a8d8ac2993cb130be0af7e47cd024dd
+    home: https://jellyfin.org/
+    icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.3/jellyfin-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      displayName: Jellyfin
+    apiVersion: v2
+    appVersion: 10.9.11
     created: "2024-09-21T03:26:17.785451972Z"
     description: Jellyfin is the volunteer-built media solution that puts you in control
       of your media.
@@ -450,6 +467,23 @@ entries:
     type: application
     urls:
     - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.1/jellyfin-0.0.1.tgz
+    version: 0.0.1
+  mealie:
+  - annotations:
+      displayName: Mealie
+    apiVersion: v2
+    appVersion: v1.12.0
+    created: "2024-09-21T03:48:25.545042098Z"
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: f9dc2552fa542d287852d0a9df0b74a73c54cd9fcaf05aed849c794ac0fca2a6
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.1/mealie-0.0.1.tgz
     version: 0.0.1
   postgres:
   - annotations:
@@ -553,4 +587,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-21T03:26:17.785524768Z"
+generated: "2024-09-21T03:48:25.545151052Z"
