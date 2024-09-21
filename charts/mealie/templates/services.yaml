@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: jellyfin
+  name: mealie
   namespace: {{ .Release.Name }}
 spec:
   ports:
     - name: http
-      port: 8096
+      port: 9000
   selector:
-    app: jellyfin
+    app: mealie
