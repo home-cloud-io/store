@@ -473,6 +473,22 @@ entries:
       displayName: Mealie
     apiVersion: v2
     appVersion: v1.12.0
+    created: "2024-09-21T04:09:54.585102119Z"
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: f6c5d6f638cc8a1c801119d4546eb0b28325cf0d3a718b7ecdd2102a5a0bbb03
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.3/mealie-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      displayName: Mealie
+    apiVersion: v2
+    appVersion: v1.12.0
     created: "2024-09-21T03:53:10.376030017Z"
     description: Mealie is an intuitive and easy to use recipe management app.
     digest: e91410a8b82d80f65d2c3a43f03af2b899f8b64fc182ee74eccca670d7758839
@@ -603,4 +619,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-21T03:53:10.376103915Z"
+generated: "2024-09-21T04:09:54.585211143Z"
