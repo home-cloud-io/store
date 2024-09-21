@@ -416,6 +416,24 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/immich-0.0.2/immich-0.0.2.tgz
     version: 0.0.2
+  jellyfin:
+  - annotations:
+      displayName: Jellyfin
+    apiVersion: v2
+    appVersion: 10.9.11
+    created: "2024-09-21T03:18:28.966541651Z"
+    description: Jellyfin is the volunteer-built media solution that puts you in control
+      of your media.
+    digest: 596fa476407ff22015c65b08a209adf599e92a8e2ba19690e0d7670b66463cdc
+    home: https://jellyfin.org/
+    icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.1/jellyfin-0.0.1.tgz
+    version: 0.0.1
   postgres:
   - annotations:
       displayName: PostgreSQL
@@ -518,4 +536,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-15T04:38:23.924433328Z"
+generated: "2024-09-21T03:18:28.966616621Z"
