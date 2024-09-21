@@ -663,4 +663,22 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-21T04:24:29.542745961Z"
+  searxng:
+  - annotations:
+      displayName: SearXNG
+    apiVersion: v2
+    appVersion: 2024.9.19-d026486ce
+    created: "2024-09-21T04:47:28.971247954Z"
+    description: SearXNG is a free internet metasearch engine which aggregates results
+      from various search services and databases.
+    digest: f5dad6d22f3d4665df570ec99b8bee7a57b352511b759281b7168e92b3f57318
+    home: https://docs.searxng.org/
+    icon: https://avatars.githubusercontent.com/u/80454229?s=48&v=4
+    name: searxng
+    sources:
+    - https://github.com/searxng/searxng
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-09-21T04:47:28.971341897Z"
