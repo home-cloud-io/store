@@ -16,3 +16,7 @@ homeCloud:
   persistence:
     - name: data
       size: 4Gi
+
+  dependencies:
+    postgres:
+      install: false
