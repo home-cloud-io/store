@@ -9,6 +9,10 @@ homeCloud:
         name: mealie
         port: 9000
 
+  databases:
+    - name: mealie
+      type: postgres
+
   persistence:
     - name: data
       size: 4Gi
