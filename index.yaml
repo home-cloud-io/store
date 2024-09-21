@@ -473,6 +473,27 @@ entries:
       displayName: Mealie
     apiVersion: v2
     appVersion: v1.12.0
+    created: "2024-09-21T04:24:29.374309233Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: 645df5f6a1abc5b7aa8ed53baf5de07c961521a6fa224f8b033f331e148a19b7
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.4/mealie-0.0.4.tgz
+    version: 0.0.4
+  - annotations:
+      displayName: Mealie
+    apiVersion: v2
+    appVersion: v1.12.0
     created: "2024-09-21T04:09:54.585102119Z"
     description: Mealie is an intuitive and easy to use recipe management app.
     digest: f6c5d6f638cc8a1c801119d4546eb0b28325cf0d3a718b7ecdd2102a5a0bbb03
@@ -516,6 +537,29 @@ entries:
     type: application
     urls:
     - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.1/mealie-0.0.1.tgz
+    version: 0.0.1
+  memos:
+  - annotations:
+      displayName: Memos
+    apiVersion: v2
+    appVersion: 0.22.5
+    created: "2024-09-21T04:24:29.542666291Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: 8cd2170a9c52e66cba8a0cf1e8fdbe2d1b06adf7e3f2338dd84379aee61de098
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.0.1/memos-0.0.1.tgz
     version: 0.0.1
   postgres:
   - annotations:
@@ -619,4 +663,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.2/postgres-0.0.2.tgz
     version: 0.0.2
-generated: "2024-09-21T04:09:54.585211143Z"
+generated: "2024-09-21T04:24:29.542745961Z"
