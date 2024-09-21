@@ -1,0 +1,14 @@
+homeCloud:
+  routes:
+    - name: memos
+      service:
+        name: memos
+        port: 5230
+
+  databases:
+    - name: memos
+      type: postgres
+
+  dependencies:
+    postgres:
+      install: false

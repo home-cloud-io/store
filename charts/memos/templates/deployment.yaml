@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memos
+  namespace: {{ .Release.Name }}
+  labels:
+    app: memos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memos
+  template:
+    metadata:
+      labels:
+        app: memos
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: memos
+          image: ghcr.io/usememos/memos:{{ .Chart.AppVersion }}
+          imagePullPolicy: 'IfNotPresent'
+          ports:
+            - containerPort: 5230
+          env:
+            - name: MEMOS_ADDR
+              value: '0.0.0.0'
+            - name: MEMOS_PORT
+              value: '5230'
+            - name: MEMOS_METRIC
+              value: 'false'
+            - name: MEMOS_DRIVER
+              value: 'postgres'
+            - name: MEMOS_DSN
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-memos
+                  key: uri

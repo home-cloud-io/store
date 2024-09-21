@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: memos
+  namespace: {{ .Release.Name }}
+spec:
+  ports:
+    - name: http
+      port: 5230
+  selector:
+    app: memos
