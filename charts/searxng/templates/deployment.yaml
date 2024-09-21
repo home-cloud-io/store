@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: searxng
+  namespace: {{ .Release.Name }}
+  labels:
+    app: searxng
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: searxng
+  template:
+    metadata:
+      labels:
+        app: searxng
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: searxng
+          image: searxng/searxng:{{ .Chart.AppVersion }}
+          ports:
+          - containerPort: 8080
+            name: http
+          volumeMounts:
+          - name: config
+            mountPath: /etc/searxng/settings.yml
+            subPath: settings.yml
+          - name: config
+            mountPath: /etc/searxng/uwsgi.ini
+            subPath: uwsgi.ini
+      volumes:
+      - name: config
+        configMap:
+          name: searxng

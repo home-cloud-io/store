@@ -1,0 +1,9 @@
+config:
+  tokens: []
+
+homeCloud:
+  routes:
+    - name: search
+      service:
+        name: searxng
+        port: 8080
