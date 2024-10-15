@@ -3,9 +3,9 @@ homeCloud:
     - name: photos
       service:
         name: server
-        port: 3001
+        port: 2283
       # an externally accessible route will be established enabling connection
-      # to the service (on port 3001) by going to http://photos.home-cloud.local
+      # to the service (on port 2283) by going to http://photos.local
 
   databases:
     - name: immich
@@ -36,7 +36,7 @@ homeCloud:
   persistence:
     - name: data
       size: 64Gi
-      # a persistent volume claim (PVC) called `immich` will be created
+      # a persistent volume claim (PVC) called `immich-data` will be created
       # you can mount it to your containers
       # containers:
       #   - name: immich-server
@@ -47,7 +47,7 @@ homeCloud:
       # volumes:
       #   - name: uploads
       #     persistentVolumeClaim:
-      #       claimName: immich
+      #       claimName: immich-data
     - name: model-cache
       size: 8Gi
 

@@ -22,7 +22,7 @@ spec:
           image: 'ghcr.io/immich-app/immich-server:{{ .Chart.AppVersion }}'
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3001
+            - containerPort: 2283
               name: http
           env:
             - name: DB_URL
