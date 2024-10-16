@@ -34,6 +34,18 @@ spec:
               value: "6379"
             - name: IMMICH_CONFIG_FILE
               value: /etc/immich.json
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 2283
+            initialDelaySeconds: 15
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 2283
+            initialDelaySeconds: 15
+            periodSeconds: 5
           volumeMounts:
             - name: data
               mountPath: /usr/src/app/upload
