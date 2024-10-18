@@ -39,13 +39,15 @@ spec:
               path: /
               port: 2283
             initialDelaySeconds: 15
-            periodSeconds: 5
+            periodSeconds: 10
+            failureThreshold: 12
           readinessProbe:
             httpGet:
               path: /
               port: 2283
             initialDelaySeconds: 15
-            periodSeconds: 5
+            periodSeconds: 10
+            failureThreshold: 12
           volumeMounts:
             - name: data
               mountPath: /usr/src/app/upload
