@@ -1,8 +1,8 @@
-# Jellyfin
+### Jellyfin
 
 Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
 
-## How to Use
+#### How to Use
 
 After installing Jellyfin (it'll take a few minutes), go here to set up the app: http://movies.local
 

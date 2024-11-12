@@ -3,7 +3,7 @@ name: memos
 description: A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts.
 icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
 type: application
-version: 0.0.1
+version: 0.0.2
 appVersion: 0.22.5
 home: https://www.usememos.com/
 sources:

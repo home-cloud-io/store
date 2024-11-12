@@ -1,8 +1,8 @@
-# Memos
+### Memos
 
 A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts.
 
-## How to Use
+#### How to Use
 
 After installing Memos (it'll take a few minutes), go here to set up and use the app: http://memos.local
 
