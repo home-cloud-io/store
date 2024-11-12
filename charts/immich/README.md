@@ -1,8 +1,8 @@
-# Immich
+### Immich
 
 Immich is a high performance self-hosted photo and video management solution. It is a full replacement for services like iCloud and Google Photos. With Immich you can backup your favorite memories, create albums, and share them all while maintaining your privacy.
 
-## How to Use
+#### How to Use
 
 After installing Immich (it'll take a few minutes), go here to set up the app: http://photos.local
 
