@@ -8,6 +8,12 @@ After installing Immich (it'll take a few minutes), go here to set up the app: h
 
 Once you're done with that you can now install the mobile app and login to your new account.
 
+**NOTE**: When logging into your mobile app for the first time it will ask you for a "Server Endpoint URL". This will be:
+
+```
+http://photos.local/api
+```
+
 Mobile app links:
 
 - [Apple App Store](https://apps.apple.com/us/app/immich/id1613945652)
