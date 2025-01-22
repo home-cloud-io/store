@@ -57,4 +57,4 @@ spec:
             name: home-assistant
         - name: postgres-secrets
           secret:
-            secretName: postgres-home-assistant
+            secretName: postgres-homeassistant
