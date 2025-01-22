@@ -39,15 +39,15 @@ spec:
                 command:
                   - /bin/sh
                   - -c
-                  - 'echo "db_url: $(cat /etc/secrets/postgres-url)?client_encoding=utf8" > /config/secrets.yaml'
+                  - 'echo "db_url: $(cat /etc/secrets/postgres/uri)?client_encoding=utf8" > /config/secrets.yaml'
           volumeMounts:
             - name: config
               mountPath: /config
             - name: configmap
               mountPath: /config/configuration.yaml
               subPath: configuration.yaml
-            - name: postgres-url
-              mountPath: /etc/secrets
+            - name: postgres-secrets
+              mountPath: /etc/secrets/postgres
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -55,6 +55,6 @@ spec:
         - name: configmap
           configMap:
             name: home-assistant
-        - name: postgres-url
+        - name: postgres-secrets
           secret:
-            secretName: uri
+            secretName: postgres-home-assistant
