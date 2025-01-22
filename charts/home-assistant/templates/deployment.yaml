@@ -39,7 +39,7 @@ spec:
                 command:
                   - /bin/sh
                   - -c
-                  - 'echo "db_url: $(cat /etc/secrets/postgres/uri)&client_encoding=utf8" > /config/secrets.yaml'
+                  - 'echo "db_url: $(cat /etc/secrets/postgres/uri)" > /config/secrets.yaml'
           volumeMounts:
             - name: config
               mountPath: /config
