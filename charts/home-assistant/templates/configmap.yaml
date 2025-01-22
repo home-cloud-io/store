@@ -1,0 +1,21 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: home-assistant
+  namespace: {{ .Release.Name }}
+data:
+  configuration.yaml: |
+    default_config:
+
+    frontend:
+      themes: !include_dir_merge_named themes
+
+    recorder:
+      db_url: !secret db_url
+
+    http:
+      use_x_forwarded_for: true
+      trusted_proxies:
+        - 10.42.1.0/24
+        - 127.0.0.1
+        - ::1

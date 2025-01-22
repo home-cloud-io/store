@@ -1,0 +1,16 @@
+replicaCount: 1
+
+homeCloud:
+  routes:
+    - name: homeassistant
+      service:
+        name: ha
+        port: 8123
+
+  databases:
+    - name: home-assistant
+      type: postgres
+
+  persistence:
+    - name: config
+      size: 64Gi
