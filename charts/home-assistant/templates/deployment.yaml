@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: home-assistant
+  namespace: {{ .Release.Name }}
   labels:
     app: home-assistant
-  namespace: {{ .Release.Name }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app: home-assistant
@@ -24,7 +24,6 @@ spec:
           ports:
             - name: http
               containerPort: 8123
-              protocol: TCP
           livenessProbe:
             httpGet:
               path: /
