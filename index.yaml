@@ -3,6 +3,23 @@ entries:
   hello-world:
   - annotations:
       displayName: Hello World
+      status: stable
+    apiVersion: v2
+    appVersion: 1.27.1
+    created: "2025-01-22T21:44:29.457280748Z"
+    description: A simple "Hello World" application demonstrating a Home Cloud app.
+    digest: 4d2cb53264ff91f2950e07abfb94b7d50b7cac109951df8d9810d91966094e33
+    home: https://nginx.org/
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    sources:
+    - https://github.com/nginx/nginx
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.13/hello-world-0.0.13.tgz
+    version: 0.0.13
+  - annotations:
+      displayName: Hello World
     apiVersion: v2
     appVersion: 1.27.1
     created: "2024-11-12T02:25:25.039318023Z"
@@ -1056,4 +1073,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-22T20:53:39.496519111Z"
+generated: "2025-01-22T21:44:29.457387266Z"
