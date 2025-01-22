@@ -8,7 +8,7 @@ homeCloud:
         port: 8123
 
   databases:
-    - name: home-assistant
+    - name: homeassistant
       type: postgres
 
   persistence:
