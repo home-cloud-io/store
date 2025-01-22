@@ -144,6 +144,23 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: 2025.1.3
+    created: "2025-01-22T20:45:22.953500962Z"
+    description: TODO
+    digest: 5639468c2a3de241b78a9999063d00a435275a219a91f70b478affccb21cbddc
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.8/home-assistant-0.0.8.tgz
+    version: 0.0.8
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
+    appVersion: 2025.1.3
     created: "2025-01-22T20:32:52.809362961Z"
     description: TODO
     digest: 5ce0e384f6509a0996d8952ecd14f35a9443e4346537d7c163641d0c50e1da97
@@ -1021,4 +1038,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-22T20:32:52.809482274Z"
+generated: "2025-01-22T20:45:22.953597904Z"
