@@ -3,7 +3,7 @@ name: immich
 description: Immich is a high performance self-hosted photo and video management solution.
 icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
 type: application
-version: 0.0.27
+version: 0.0.28
 appVersion: v1.124.2
 home: https://immich.app/
 sources:
@@ -15,3 +15,4 @@ dependencies:
     condition: homeCloud.dependencies.postgres.install
 annotations:
   displayName: Immich
+  status: stable

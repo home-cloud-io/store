@@ -3,10 +3,11 @@ name: jellyfin
 description: Jellyfin is the volunteer-built media solution that puts you in control of your media.
 icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
 type: application
-version: 0.0.4
-appVersion: 10.9.11
+version: 0.0.5
+appVersion: 10.10.4
 home: https://jellyfin.org/
 sources:
   - https://github.com/jellyfin/jellyfin
 annotations:
   displayName: Jellyfin
+  status: stable

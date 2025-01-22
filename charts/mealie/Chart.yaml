@@ -3,8 +3,8 @@ name: mealie
 description: Mealie is an intuitive and easy to use recipe management app.
 icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
 type: application
-version: 0.0.5
-appVersion: v1.12.0
+version: 0.0.6
+appVersion: v2.5.0
 home: https://mealie.io/
 sources:
   - https://github.com/mealie-recipes/mealie
@@ -15,3 +15,4 @@ dependencies:
     condition: homeCloud.dependencies.postgres.install
 annotations:
   displayName: Mealie
+  status: stable
