@@ -2,12 +2,13 @@ replicaCount: 1
 
 homeCloud:
   routes:
-    - name: homeassistant
+    - name: home-assistant
       service:
-        name: ha
+        name: home-assistant
         port: 8123
 
   databases:
+    # NOTE: postgres doesn't allow hyphens in database names
     - name: homeassistant
       type: postgres
 
