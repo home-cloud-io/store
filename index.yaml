@@ -350,6 +350,29 @@ entries:
       displayName: Immich
       status: stable
     apiVersion: v2
+    appVersion: v1.125.7
+    created: "2025-01-30T23:51:50.687987342Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: 7b12c7a41c5741f4805185f8c00cb789ff0cb1ae4baca3a118da4ff8ea2a2c68
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.32/immich-0.0.32.tgz
+    version: 0.0.32
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
     appVersion: v1.125.6
     created: "2025-01-28T15:42:05.88739324Z"
     dependencies:
@@ -1086,6 +1109,29 @@ entries:
       displayName: Memos
       status: stable
     apiVersion: v2
+    appVersion: 0.23.1
+    created: "2025-01-30T23:51:50.801187033Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: 0527d55743fbb5f3df78f6eeed3bdd75be666888456fd51c3a62eee4aeb96089
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.0.4/memos-0.0.4.tgz
+    version: 0.0.4
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
     appVersion: 0.23.0
     created: "2025-01-22T23:55:56.802938666Z"
     dependencies:
@@ -1339,4 +1385,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-28T15:43:51.330055857Z"
+generated: "2025-01-30T23:51:50.801461715Z"
