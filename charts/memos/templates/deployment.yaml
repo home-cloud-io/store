@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Release.Name }}
   labels:
     app: memos
+    domain: apps
 spec:
   replicas: 1
   selector:
