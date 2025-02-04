@@ -1110,6 +1110,29 @@ entries:
       status: stable
     apiVersion: v2
     appVersion: 0.23.1
+    created: "2025-02-04T21:07:17.063510571Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: cfb4ecd40cac49b109a7ad446c6ab5fda7737d89a3841f89200f56d2b09e32c1
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.0.5/memos-0.0.5.tgz
+    version: 0.0.5
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
+    appVersion: 0.23.1
     created: "2025-01-30T23:51:50.801187033Z"
     dependencies:
     - condition: homeCloud.dependencies.postgres.install
@@ -1385,4 +1408,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-30T23:51:50.801461715Z"
+generated: "2025-02-04T21:07:17.063705336Z"
