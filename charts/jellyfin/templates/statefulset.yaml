@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: jellyfin
+        domain: apps
     spec:
       affinity:
         nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
