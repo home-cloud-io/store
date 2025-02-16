@@ -194,6 +194,24 @@ entries:
       displayName: Home Assistant
       status: alpha
     apiVersion: v2
+    appVersion: 2025.2.4
+    created: "2025-02-16T20:51:35.861458253Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: b67830f9b03c73c490122dcf73a3837864ea4e5c38a3ff64ab0d10586e3a52ec
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.12/home-assistant-0.0.12.tgz
+    version: 0.0.12
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
     appVersion: 2025.1.4
     created: "2025-02-04T21:36:35.686545244Z"
     description: Open source home automation that puts local control and privacy first.
@@ -381,6 +399,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
     version: 0.0.1
   immich:
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
+    appVersion: v1.126.1
+    created: "2025-02-16T20:51:35.962771007Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: 388b0935bc3ff61ea2ccf08705b7eaf5822c7c127a5e2a19d9fff86b14330949
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.34/immich-0.0.34.tgz
+    version: 0.0.34
   - annotations:
       displayName: Immich
       status: stable
@@ -1072,6 +1113,28 @@ entries:
       displayName: Mealie
       status: stable
     apiVersion: v2
+    appVersion: v2.6.0
+    created: "2025-02-16T20:51:36.091706209Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: 7a9e56674536a98ad22d632980f5a92c4a5ff361f3419e02b19d6db24f550020
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.8/mealie-0.0.8.tgz
+    version: 0.0.8
+  - annotations:
+      displayName: Mealie
+      status: stable
+    apiVersion: v2
     appVersion: v2.5.0
     created: "2025-02-04T21:36:36.101417543Z"
     dependencies:
@@ -1203,6 +1266,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.1/mealie-0.0.1.tgz
     version: 0.0.1
   memos:
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
+    appVersion: 0.24.0
+    created: "2025-02-16T20:51:36.208298024Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: cf9866534a3e44419b0ecdc7329d863da658a39d29e9879b7103c49b63f4e28b
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.0.7/memos-0.0.7.tgz
+    version: 0.0.7
   - annotations:
       displayName: Memos
       status: stable
@@ -1565,4 +1651,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-02-04T21:36:36.422991899Z"
+generated: "2025-02-16T20:51:36.208748234Z"
