@@ -3,8 +3,8 @@ name: searxng
 description: SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. 
 icon: https://avatars.githubusercontent.com/u/80454229?s=48&v=4
 type: application
-version: 0.0.4
-appVersion: 2025.1.21-bee267792
+version: 0.0.5
+appVersion: 2025.4.16-b84ae3997
 home: https://docs.searxng.org/
 sources:
   - https://github.com/searxng/searxng
