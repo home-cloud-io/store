@@ -439,6 +439,29 @@ entries:
       displayName: Immich
       status: stable
     apiVersion: v2
+    appVersion: v1.132.1
+    created: "2025-04-25T15:15:20.737582247Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: f2b5959c5d90476240f2d20c205ea3fe164f3d3bf8ef688f08008d543d7304fd
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.37/immich-0.0.37.tgz
+    version: 0.0.37
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
     appVersion: v1.132.2
     created: "2025-04-25T15:13:16.368533239Z"
     dependencies:
@@ -1796,4 +1819,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2025-04-25T15:13:50.280849705Z"
+generated: "2025-04-25T15:15:20.738382056Z"
