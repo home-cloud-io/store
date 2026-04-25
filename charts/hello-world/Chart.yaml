@@ -3,8 +3,8 @@ name: hello-world
 description: A simple "Hello World" application demonstrating a Home Cloud app.
 icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
 type: application
-version: 0.0.16
-appVersion: "1.29.1"
+version: 0.0.17
+appVersion: "1.30.0"
 home: https://nginx.org/
 sources:
   - https://github.com/nginx/nginx
