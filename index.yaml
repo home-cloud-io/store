@@ -1718,6 +1718,24 @@ entries:
       displayName: PostgreSQL
       status: stable
     apiVersion: v2
+    appVersion: pg15-postgis3-pgvector0.8.1-vchord0.5.3
+    created: "2026-05-15T03:23:57.461078274Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: a88ed3b561c523d3b17a64c84aa55a9bbf2270264df411afbbd84e94d309c1b7
+    home: https://www.postgresql.org/
+    icon: https://avatars.githubusercontent.com/u/177543?s=48&v=4
+    name: postgres
+    sources:
+    - https://github.com/postgres/postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.15/postgres-0.0.15.tgz
+    version: 0.0.15
+  - annotations:
+      displayName: PostgreSQL
+      status: stable
+    apiVersion: v2
     appVersion: pg15-v0.2.0
     created: "2025-09-24T03:19:04.543640563Z"
     description: PostgreSQL is a powerful, open source object-relational database
@@ -1993,4 +2011,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-04-25T05:31:59.590057027Z"
+generated: "2026-05-15T03:23:57.461349448Z"
