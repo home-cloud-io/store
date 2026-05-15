@@ -1170,6 +1170,24 @@ entries:
       displayName: Jellyfin
       status: stable
     apiVersion: v2
+    appVersion: 10.11.8
+    created: "2026-05-15T04:37:32.485523499Z"
+    description: Jellyfin is the volunteer-built media solution that puts you in control
+      of your media.
+    digest: b03c0c3f0eaa20696a25684ab6bfcbbd43bf4c980c1d8083d355c4bd04eec8a3
+    home: https://jellyfin.org/
+    icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.9/jellyfin-0.0.9.tgz
+    version: 0.0.9
+  - annotations:
+      displayName: Jellyfin
+      status: stable
+    apiVersion: v2
     appVersion: 10.10.7
     created: "2025-09-24T03:19:04.133773285Z"
     description: Jellyfin is the volunteer-built media solution that puts you in control
@@ -2011,4 +2029,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-05-15T03:23:57.461349448Z"
+generated: "2026-05-15T04:37:32.485707596Z"
