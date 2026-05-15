@@ -3,8 +3,8 @@ name: postgres
 description: PostgreSQL is a powerful, open source object-relational database (with pgvecto.rs installed).
 icon: https://avatars.githubusercontent.com/u/177543?s=48&v=4
 type: application
-version: 0.0.14
-appVersion: pg15-v0.2.0
+version: 0.0.15
+appVersion: pg15-postgis3-pgvector0.8.1-vchord0.5.3
 home: https://www.postgresql.org/
 sources:
   - https://github.com/postgres/postgres

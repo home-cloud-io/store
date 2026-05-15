@@ -1,3 +1,5 @@
+hub: ghcr.io/home-cloud-io/postgres
+
 homeCloud:
   persistence:
     - name: data
