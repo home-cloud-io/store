@@ -1,0 +1,18 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: filebrowser
+  namespace: {{ .Release.Name }}
+data:
+  config.yaml: |
+    frontend:
+      name: "File Browser"
+    server:
+      # using the config volume so it can persist across restarts
+      cacheDir: /etc/config/cache
+      database: /etc/config/database.db
+      sources:
+        # we'll mount all drives under here so that they're automatically indexed
+        - path: /data
+          config:
+            defaultEnabled: true

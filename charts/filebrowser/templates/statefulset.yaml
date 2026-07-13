@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: filebrowser
+  namespace: {{ .Release.Name }}
+  labels:
+    app: filebrowser
+spec:
+  serviceName: filebrowser
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filebrowser
+  template:
+    metadata:
+      labels:
+        app: filebrowser
+        domain: apps
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: filebrowser
+          image: 'gtstef/filebrowser:{{ .Chart.AppVersion }}'
+          imagePullPolicy: IfNotPresent
+          # need to run as root since the mounted files are root
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
+          env:
+            - name: FILEBROWSER_CONFIG
+              value: /etc/config.yaml
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: configmap
+              mountPath: /etc/config/config.yaml
+              subPath: config.yaml
+            - mountPath: /etc/config
+              name: config-volume
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-data
+        - name: configmap
+          configMap:
+            name: filebrowser
+        - name: config-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-config
