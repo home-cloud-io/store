@@ -39,9 +39,6 @@ spec:
             - mountPath: /etc/config
               name: config-volume
       volumes:
-        - name: data
-          persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-data
         - name: configmap
           configMap:
             name: filebrowser
