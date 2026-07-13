@@ -29,7 +29,7 @@ spec:
             runAsUser: 0
           env:
             - name: FILEBROWSER_CONFIG
-              value: /etc/config.yaml
+              value: /etc/config/config.yaml
           ports:
             - containerPort: 80
           volumeMounts:

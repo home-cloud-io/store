@@ -8,6 +8,8 @@ data:
     frontend:
       name: "File Browser"
     server:
+      disableUpdateCheck: true
+      externalUrl: "http://files.local"
       # using the config volume so it can persist across restarts
       cacheDir: /etc/config/cache
       database: /etc/config/database.db
