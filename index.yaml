@@ -6,6 +6,24 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: 1.4.0-stable
+    created: "2026-07-13T04:38:14.552827342Z"
+    description: The best free self-hosted web-based file manager with source configuration,
+      modern authentication, office support, and lightning-fast search.
+    digest: 5d61995b86c27d6119e87ad09dd8d7e7f0d6ad40acda25a87afce4b99993b047
+    home: https://filebrowserquantum.com
+    icon: https://filebrowserquantum.com/logo.svg
+    name: filebrowser
+    sources:
+    - https://github.com/gtsteffaniak/filebrowser
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/filebrowser-0.0.3/filebrowser-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      displayName: File Browser
+      status: alpha
+    apiVersion: v2
+    appVersion: 1.4.0-stable
     created: "2026-07-13T04:31:10.618466581Z"
     description: The best free self-hosted web-based file manager with source configuration,
       modern authentication, office support, and lightning-fast search.
@@ -2210,4 +2228,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-07-13T04:31:10.618716704Z"
+generated: "2026-07-13T04:38:14.553018665Z"
