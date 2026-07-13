@@ -1,0 +1,13 @@
+apiVersion: v2
+name: filebrowser
+description: The best free self-hosted web-based file manager with source configuration, modern authentication, office support, and lightning-fast search.
+icon: https://filebrowserquantum.com/logo.svg
+type: application
+version: 0.0.1
+appVersion: 1.4.0-stable
+home: https://filebrowserquantum.com
+sources:
+  - https://github.com/gtsteffaniak/filebrowser
+annotations:
+  displayName: File Browser
+  status: alpha

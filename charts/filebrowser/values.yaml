@@ -1,0 +1,11 @@
+homeCloud:
+  routes:
+    - name: files
+      service:
+        name: filebrowser
+        port: 80
+
+  # for the database
+  persistence:
+    - name: config
+      size: 1Gi
