@@ -38,6 +38,10 @@ spec:
               subPath: config.yaml
             - mountPath: /etc/config
               name: config-volume
+            {{- range .Values.disks }}
+            - mountPath: {{ printf "/data/%s" .name }}
+              name: {{ .name }}-disk-volume
+            {{- end }}
       volumes:
         - name: configmap
           configMap:
@@ -45,3 +49,8 @@ spec:
         - name: config-volume
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-config
+        {{- range .Values.disks }}
+        - name: {{ .name }}-disk-volume
+          persistentVolumeClaim:
+            claimName: {{ printf "%s-%s-disk" $.Release.Name .name }}
+        {{- end }}

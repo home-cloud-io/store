@@ -1,3 +1,8 @@
+# NOTE: for internal operator use only
+# disks:
+#   - name: alice
+#   - name: bob
+
 homeCloud:
   routes:
     - name: files

@@ -3,7 +3,7 @@ name: filebrowser
 description: The best free self-hosted web-based file manager with source configuration, modern authentication, office support, and lightning-fast search.
 icon: https://filebrowserquantum.com/logo.svg
 type: application
-version: 0.0.3
+version: 0.0.4
 appVersion: 1.4.0-stable
 home: https://filebrowserquantum.com
 sources:
