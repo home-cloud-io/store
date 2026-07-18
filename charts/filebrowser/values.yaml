@@ -1,8 +1,3 @@
-# NOTE: for internal operator use only
-# disks:
-#   - name: alice
-#   - name: bob
-
 homeCloud:
   routes:
     - name: files
@@ -14,3 +9,8 @@ homeCloud:
   persistence:
     - name: config
       size: 1Gi
+
+  # NOTE: for internal operator use only
+  # disks:
+  #   - name: alice
+  #   - name: bob
