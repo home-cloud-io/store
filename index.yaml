@@ -6,6 +6,24 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: 1.4.0-stable
+    created: "2026-08-30T03:31:38.43988899Z"
+    description: The best free self-hosted web-based file manager with source configuration,
+      modern authentication, office support, and lightning-fast search.
+    digest: c9a01f6b03a25f06214fceff98b8d2778dcd27d0b6cef3af1f8dd9473eb269f4
+    home: https://filebrowserquantum.com
+    icon: https://filebrowserquantum.com/logo.svg
+    name: filebrowser
+    sources:
+    - https://github.com/gtsteffaniak/filebrowser
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/filebrowser-0.0.5/filebrowser-0.0.5.tgz
+    version: 0.0.5
+  - annotations:
+      displayName: File Browser
+      status: alpha
+    apiVersion: v2
+    appVersion: 1.4.0-stable
     created: "2026-07-14T03:22:16.563428091Z"
     description: The best free self-hosted web-based file manager with source configuration,
       modern authentication, office support, and lightning-fast search.
@@ -74,6 +92,23 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/filebrowser-0.0.1/filebrowser-0.0.1.tgz
     version: 0.0.1
   hello-world:
+  - annotations:
+      displayName: Hello World
+      status: stable
+    apiVersion: v2
+    appVersion: 1.31.0
+    created: "2026-08-30T03:31:38.651123291Z"
+    description: A simple "Hello World" application demonstrating a Home Cloud app.
+    digest: 75027290e640409e775a44ce0614f7f3807a9a5ebe338640e95bf3106ab953d6
+    home: https://nginx.org/
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    sources:
+    - https://github.com/nginx/nginx
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.19/hello-world-0.0.19.tgz
+    version: 0.0.19
   - annotations:
       displayName: Hello World
       status: stable
@@ -314,6 +349,24 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   home-assistant:
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
+    appVersion: 2026.5.1
+    created: "2026-08-30T03:31:38.910793533Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: 9b14caf437100d3731e5fd4189069b456059dfdfb07d66a924550bdf5f0fb0d3
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.18/home-assistant-0.0.18.tgz
+    version: 0.0.18
   - annotations:
       displayName: Home Assistant
       status: alpha
@@ -595,6 +648,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
     version: 0.0.1
   immich:
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
+    appVersion: v2.7.5
+    created: "2026-08-30T03:31:39.154761649Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: d56f36449730bf1b299d88d6825d2481ecc33059a0e7c6a79efa7475f4778d25
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-0.0.41/immich-0.0.41.tgz
+    version: 0.0.41
   - annotations:
       displayName: Immich
       status: stable
@@ -1325,6 +1401,24 @@ entries:
       status: stable
     apiVersion: v2
     appVersion: 10.11.8
+    created: "2026-08-30T03:31:39.359631954Z"
+    description: Jellyfin is the volunteer-built media solution that puts you in control
+      of your media.
+    digest: 88587db00d1642cf6263417e1ae01d98878fbdcc20eb6ba25d9258176ba03b3e
+    home: https://jellyfin.org/
+    icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.10/jellyfin-0.0.10.tgz
+    version: 0.0.10
+  - annotations:
+      displayName: Jellyfin
+      status: stable
+    apiVersion: v2
+    appVersion: 10.11.8
     created: "2026-05-15T04:37:32.485523499Z"
     description: Jellyfin is the volunteer-built media solution that puts you in control
       of your media.
@@ -1479,6 +1573,28 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.1/jellyfin-0.0.1.tgz
     version: 0.0.1
   mealie:
+  - annotations:
+      displayName: Mealie
+      status: stable
+    apiVersion: v2
+    appVersion: v3.17.0
+    created: "2026-08-30T03:31:39.597196595Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: 665219080503363cd184f531d7b4720e4241eebbdc485852b7e48f24bc443dea
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.12/mealie-0.0.12.tgz
+    version: 0.0.12
   - annotations:
       displayName: Mealie
       status: stable
@@ -1702,6 +1818,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.1/mealie-0.0.1.tgz
     version: 0.0.1
   memos:
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
+    appVersion: 0.28.0
+    created: "2026-08-30T03:31:39.859705409Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: b774e4fa6db8e970714e8a45326589afd9114f145a829c57f37af0bb0b25ba18
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.0.11/memos-0.0.11.tgz
+    version: 0.0.11
   - annotations:
       displayName: Memos
       status: stable
@@ -1936,6 +2075,24 @@ entries:
       status: stable
     apiVersion: v2
     appVersion: pg15-postgis3-pgvector0.8.1-vchord0.5.3
+    created: "2026-08-30T03:31:40.053807458Z"
+    description: PostgreSQL is a powerful, open source object-relational database
+      (with pgvecto.rs installed).
+    digest: 01f22917b3ed20bac31df88b0a847dc7e4139e95b835a9f95f1cc5651f5199aa
+    home: https://www.postgresql.org/
+    icon: https://avatars.githubusercontent.com/u/177543?s=48&v=4
+    name: postgres
+    sources:
+    - https://github.com/postgres/postgres
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/postgres-0.0.16/postgres-0.0.16.tgz
+    version: 0.0.16
+  - annotations:
+      displayName: PostgreSQL
+      status: stable
+    apiVersion: v2
+    appVersion: pg15-postgis3-pgvector0.8.1-vchord0.5.3
     created: "2026-05-15T03:23:57.461078274Z"
     description: PostgreSQL is a powerful, open source object-relational database
       (with pgvecto.rs installed).
@@ -2127,6 +2284,24 @@ entries:
       status: stable
     apiVersion: v2
     appVersion: 2026.5.15-240f403d9
+    created: "2026-08-30T03:31:40.302173495Z"
+    description: SearXNG is a free internet metasearch engine which aggregates results
+      from various search services and databases.
+    digest: 561b436ce186d08179b21b86966b7700d94444efa5541c1701a67e32f56f1d91
+    home: https://docs.searxng.org/
+    icon: https://avatars.githubusercontent.com/u/80454229?s=48&v=4
+    name: searxng
+    sources:
+    - https://github.com/searxng/searxng
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.8/searxng-0.0.8.tgz
+    version: 0.0.8
+  - annotations:
+      displayName: SearXNG
+      status: stable
+    apiVersion: v2
+    appVersion: 2026.5.15-240f403d9
     created: "2026-05-15T13:48:46.968293766Z"
     description: SearXNG is a free internet metasearch engine which aggregates results
       from various search services and databases.
@@ -2246,4 +2421,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-07-14T03:22:16.563665796Z"
+generated: "2026-08-30T03:31:40.302964613Z"
