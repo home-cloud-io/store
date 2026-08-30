@@ -17,8 +17,6 @@ spec:
         app: memos
         domain: apps
     spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: memos
           image: ghcr.io/usememos/memos:{{ .Chart.AppVersion }}

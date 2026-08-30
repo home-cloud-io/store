@@ -17,8 +17,6 @@ spec:
         app: jellyfin
         domain: apps
     spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: jellyfin
           image: 'jellyfin/jellyfin:{{ .Chart.AppVersion }}'

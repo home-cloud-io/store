@@ -16,8 +16,6 @@ spec:
         app: hello-world
         domain: apps
     spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: hello-world
           image: 'nginx:{{ .Chart.AppVersion }}'

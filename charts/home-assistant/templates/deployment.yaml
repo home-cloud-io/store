@@ -16,8 +16,6 @@ spec:
         app: home-assistant
         domain: apps
     spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: home-assistant
           image: 'homeassistant/home-assistant:{{ .Chart.AppVersion }}'
