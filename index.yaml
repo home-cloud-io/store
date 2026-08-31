@@ -6,6 +6,24 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: 1.4.0-stable
+    created: "2026-08-31T03:50:48.539743299Z"
+    description: The best free self-hosted web-based file manager with source configuration,
+      modern authentication, office support, and lightning-fast search.
+    digest: 7539fa3c1ec66dd3fcf70301a654ffc9eeffa52dc13306c02a2cec6e56c55d0b
+    home: https://filebrowserquantum.com
+    icon: https://filebrowserquantum.com/logo.svg
+    name: filebrowser
+    sources:
+    - https://github.com/gtsteffaniak/filebrowser
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/filebrowser-0.0.6/filebrowser-0.0.6.tgz
+    version: 0.0.6
+  - annotations:
+      displayName: File Browser
+      status: alpha
+    apiVersion: v2
+    appVersion: 1.4.0-stable
     created: "2026-08-30T03:31:38.43988899Z"
     description: The best free self-hosted web-based file manager with source configuration,
       modern authentication, office support, and lightning-fast search.
@@ -2069,6 +2087,25 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/memos-0.0.1/memos-0.0.1.tgz
     version: 0.0.1
+  nextexplorer:
+  - annotations:
+      displayName: Explorer
+      status: alpha
+    apiVersion: v2
+    appVersion: v2.2.6
+    created: "2026-08-31T03:50:48.69106293Z"
+    description: A modern, self-hosted file explorer with secure access control and
+      a polished UX.
+    digest: dbcaba8b134e2fa4022276b2b5a712b1cc3b8f08cbbb3956df97f71fdfd2ca27
+    home: https://explorer.nxz.ai/
+    icon: https://raw.githubusercontent.com/nxzai/NextExplorer/refs/heads/main/docs/public/images/logo.png
+    name: nextexplorer
+    sources:
+    - https://github.com/nxzai/NextExplorer
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/nextexplorer-0.0.1/nextexplorer-0.0.1.tgz
+    version: 0.0.1
   postgres:
   - annotations:
       displayName: PostgreSQL
@@ -2421,4 +2458,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-08-30T03:31:40.302964613Z"
+generated: "2026-08-31T03:50:48.691338877Z"
