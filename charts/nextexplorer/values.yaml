@@ -1,0 +1,19 @@
+homeCloud:
+  routes:
+    - name: explorer
+      service:
+        name: nextexplorer
+        port: 3000
+
+  secrets:
+    - name: config
+      keys:
+        - name: session_secret
+          length: 24
+          noSpecialCharacters: true
+
+  persistence:
+    - name: config
+      size: 4Gi
+    - name: cache
+      size: 4Gi

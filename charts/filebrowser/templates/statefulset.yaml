@@ -36,9 +36,9 @@ spec:
               subPath: config.yaml
             - mountPath: /etc/config
               name: config-volume
-            {{- range .Values.disks }}
+            {{- range .Values.homeCloud.disks }}
             - mountPath: {{ printf "/data/%s" .name }}
-              name: {{ .name }}-disk-volume
+              name: {{ .name }}
             {{- end }}
       volumes:
         - name: configmap
@@ -47,8 +47,8 @@ spec:
         - name: config-volume
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-config
-        {{- range .Values.disks }}
-        - name: {{ .name }}-disk-volume
+        {{- range .Values.homeCloud.disks }}
+        - name: {{ .name }}
           persistentVolumeClaim:
-            claimName: {{ printf "%s-%s-disk" $.Release.Name .name }}
+            claimName: {{ .claimName }}
         {{- end }}

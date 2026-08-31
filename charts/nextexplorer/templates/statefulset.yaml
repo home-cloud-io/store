@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nextexplorer
+  namespace: {{ .Release.Name }}
+  labels:
+    app: nextexplorer
+spec:
+  serviceName: nextexplorer
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextexplorer
+  template:
+    metadata:
+      labels:
+        app: nextexplorer
+        domain: apps
+    spec:
+      affinity:
+        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
+      containers:
+        - name: nextexplorer
+          image: 'nxzai/explorer:{{ .Chart.AppVersion }}'
+          imagePullPolicy: IfNotPresent
+          # need to run as root since the mounted files are root
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PUBLIC_URL
+              value: http://explorer.local
+            - name: SESSION_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: config-nextexplorer
+                  key: session_secret
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - mountPath: /config
+              name: config-volume
+            - mountPath: /cache
+              name: cache-volume
+      volumes:
+        - name: config-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-config
+        - name: cache-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-cache
