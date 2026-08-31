@@ -17,8 +17,6 @@ spec:
         app: nextexplorer
         domain: apps
     spec:
-      affinity:
-        nodeAffinity: {{ toYaml .Values.homeCloud.nodeAffinity | nindent 12 }}
       containers:
         - name: nextexplorer
           image: 'nxzai/explorer:{{ .Chart.AppVersion }}'
@@ -44,6 +42,10 @@ spec:
               name: config-volume
             - mountPath: /cache
               name: cache-volume
+            {{- range .Values.homeCloud.disks }}
+            - mountPath: {{ printf "/mnt/%s" .name }}
+              name: {{ .name }}
+            {{- end }}
       volumes:
         - name: config-volume
           persistentVolumeClaim:
@@ -51,3 +53,8 @@ spec:
         - name: cache-volume
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-cache
+        {{- range .Values.homeCloud.disks }}
+        - name: {{ .name }}
+          persistentVolumeClaim:
+            claimName: {{ .claimName }}
+        {{- end }}
