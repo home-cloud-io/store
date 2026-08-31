@@ -2093,6 +2093,24 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: v2.2.6
+    created: "2026-08-31T04:07:33.479032321Z"
+    description: A modern, self-hosted file explorer with secure access control and
+      a polished UX.
+    digest: 1d94f371be7ad27b04597962cb755cc05f26baab68376b804486b2328e67585d
+    home: https://explorer.nxz.ai/
+    icon: https://raw.githubusercontent.com/nxzai/NextExplorer/refs/heads/main/docs/public/images/logo.png
+    name: nextexplorer
+    sources:
+    - https://github.com/nxzai/NextExplorer
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/nextexplorer-0.0.2/nextexplorer-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      displayName: Explorer
+      status: alpha
+    apiVersion: v2
+    appVersion: v2.2.6
     created: "2026-08-31T03:50:48.69106293Z"
     description: A modern, self-hosted file explorer with secure access control and
       a polished UX.
@@ -2458,4 +2476,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-08-31T03:50:48.691338877Z"
+generated: "2026-08-31T04:07:33.479300178Z"
