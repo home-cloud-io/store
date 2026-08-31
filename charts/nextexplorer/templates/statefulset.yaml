@@ -33,7 +33,7 @@ spec:
             - name: SESSION_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: config-nextexplorer
+                  name: config
                   key: session_secret
           ports:
             - containerPort: 3000

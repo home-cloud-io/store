@@ -3,7 +3,7 @@ name: nextexplorer
 description: A modern, self-hosted file explorer with secure access control and a polished UX.
 icon: https://raw.githubusercontent.com/nxzai/NextExplorer/refs/heads/main/docs/public/images/logo.png
 type: application
-version: 0.0.2
+version: 0.0.3
 appVersion: v2.2.6
 home: https://explorer.nxz.ai/
 sources:
