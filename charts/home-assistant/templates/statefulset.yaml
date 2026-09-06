@@ -1,11 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: home-assistant
   namespace: {{ .Release.Name }}
   labels:
     app: home-assistant
 spec:
+  serviceName: home-assistant
   replicas: 1
   selector:
     matchLabels:
@@ -16,6 +17,24 @@ spec:
         app: home-assistant
         domain: apps
     spec:
+      initContainers:
+        - name: install-hacs
+          image: 'homeassistant/home-assistant:{{ .Chart.AppVersion }}'
+          imagePullPolicy: IfNotPresent
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -e
+              if [ ! -d /config/custom_components/hacs ]; then
+                mkdir -p /config/custom_components/hacs
+                wget -O /tmp/hacs.zip "https://github.com/hacs/integration/releases/download/{{ .Values.hacs.version }}/hacs.zip"
+                unzip /tmp/hacs.zip -d /config/custom_components/hacs
+                rm /tmp/hacs.zip
+              fi
+          volumeMounts:
+            - name: config
+              mountPath: /config
       containers:
         - name: home-assistant
           image: 'homeassistant/home-assistant:{{ .Chart.AppVersion }}'
