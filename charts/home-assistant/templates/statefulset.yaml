@@ -25,8 +25,12 @@ spec:
             - /bin/sh
             - -c
             - |
+              set -e
               if [ ! -d /config/custom_components/hacs ]; then
-                wget -O - https://get.hacs.xyz | bash -
+                mkdir -p /config/custom_components/hacs
+                wget -O /tmp/hacs.zip "https://github.com/hacs/integration/releases/download/{{ .Values.hacs.version }}/hacs.zip"
+                unzip /tmp/hacs.zip -d /config/custom_components/hacs
+                rm /tmp/hacs.zip
               fi
           volumeMounts:
             - name: config
