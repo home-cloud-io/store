@@ -1,5 +1,8 @@
 replicaCount: 1
 
+hacs:
+  version: "2.0.5"
+
 homeCloud:
   routes:
     - name: home-assistant
