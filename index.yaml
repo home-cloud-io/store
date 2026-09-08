@@ -371,6 +371,24 @@ entries:
       displayName: Home Assistant
       status: alpha
     apiVersion: v2
+    appVersion: 2026.9.1
+    created: "2026-09-08T03:57:59.882229262Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: d3420c24f059bd5ad68fc0d017b426dbcbb71744552fb90db277511c1d0d3e4d
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.19/home-assistant-0.0.19.tgz
+    version: 0.0.19
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
     appVersion: 2026.5.1
     created: "2026-08-30T03:31:38.910793533Z"
     description: Open source home automation that puts local control and privacy first.
@@ -2439,4 +2457,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-08-31T04:11:01.196007403Z"
+generated: "2026-09-08T03:57:59.882617251Z"
