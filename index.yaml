@@ -5,6 +5,24 @@ entries:
       displayName: File Browser
       status: alpha
     apiVersion: v2
+    appVersion: 1.5.6-stable
+    created: "2026-09-15T03:24:42.444670754Z"
+    description: The best free self-hosted web-based file manager with source configuration,
+      modern authentication, office support, and lightning-fast search.
+    digest: fc67245513d6198ee9ff5c8740d5bb68c86a0e31134871f41ed67b646b820956
+    home: https://filebrowserquantum.com
+    icon: https://filebrowserquantum.com/logo.svg
+    name: filebrowser
+    sources:
+    - https://github.com/gtsteffaniak/filebrowser
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/filebrowser-1.5.6-stable/filebrowser-1.5.6-stable.tgz
+    version: 1.5.6-stable
+  - annotations:
+      displayName: File Browser
+      status: alpha
+    apiVersion: v2
     appVersion: 1.4.0-stable
     created: "2026-08-31T03:50:48.539743299Z"
     description: The best free self-hosted web-based file manager with source configuration,
@@ -110,6 +128,23 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/filebrowser-0.0.1/filebrowser-0.0.1.tgz
     version: 0.0.1
   hello-world:
+  - annotations:
+      displayName: Hello World
+      status: stable
+    apiVersion: v2
+    appVersion: 1.31.5
+    created: "2026-09-15T03:24:42.588508718Z"
+    description: A simple "Hello World" application demonstrating a Home Cloud app.
+    digest: 5cc87d9dbbc8ef85007e31f8e44fd87474e415a59576cdafa78eac4d785149a0
+    home: https://nginx.org/
+    icon: https://avatars.githubusercontent.com/u/1412239?s=48&v=4
+    name: hello-world
+    sources:
+    - https://github.com/nginx/nginx
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/hello-world-1.31.5/hello-world-1.31.5.tgz
+    version: 1.31.5
   - annotations:
       displayName: Hello World
       status: stable
@@ -367,6 +402,24 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   home-assistant:
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
+    appVersion: 2026.9.2
+    created: "2026-09-15T03:24:42.737087628Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: ea1a5404fcd72eccf89e44035656b0a1ef493c7ea961c86f3f687730e1688c9e
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-2026.9.2/home-assistant-2026.9.2.tgz
+    version: 2026.9.2
   - annotations:
       displayName: Home Assistant
       status: alpha
@@ -702,6 +755,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
     version: 0.0.1
   immich:
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
+    appVersion: v3.2.0
+    created: "2026-09-15T03:24:42.898002552Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: fc79bf26a0316682046d4d2a24476d4147829b820d7acc12dd9c240f7586fb0a
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-3.2.0/immich-3.2.0.tgz
+    version: 3.2.0
   - annotations:
       displayName: Immich
       status: stable
@@ -1454,6 +1530,24 @@ entries:
       displayName: Jellyfin
       status: stable
     apiVersion: v2
+    appVersion: "12.0"
+    created: "2026-09-15T03:24:43.032074321Z"
+    description: Jellyfin is the volunteer-built media solution that puts you in control
+      of your media.
+    digest: 78de6dffab4728547fd3b847441cd30dae6c74d5ee14eeff440cbee457f7eab9
+    home: https://jellyfin.org/
+    icon: https://avatars.githubusercontent.com/u/45698031?s=48&v=4
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/jellyfin-12.0.0/jellyfin-12.0.0.tgz
+    version: 12.0.0
+  - annotations:
+      displayName: Jellyfin
+      status: stable
+    apiVersion: v2
     appVersion: 10.11.8
     created: "2026-08-30T03:31:39.359631954Z"
     description: Jellyfin is the volunteer-built media solution that puts you in control
@@ -1627,6 +1721,28 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/jellyfin-0.0.1/jellyfin-0.0.1.tgz
     version: 0.0.1
   mealie:
+  - annotations:
+      displayName: Mealie
+      status: stable
+    apiVersion: v2
+    appVersion: v3.25.1
+    created: "2026-09-15T03:24:43.173727131Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: 7b2715b7dad660ed5fd73dc1c9499ad18934940c1aa79a3bc213a51823ea9cb4
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-3.25.1/mealie-3.25.1.tgz
+    version: 3.25.1
   - annotations:
       displayName: Mealie
       status: stable
@@ -1872,6 +1988,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/mealie-0.0.1/mealie-0.0.1.tgz
     version: 0.0.1
   memos:
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
+    appVersion: 0.30.0
+    created: "2026-09-15T03:24:43.321560236Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: 1418d23530f0cb19e58958551bafdf64a06c49e1ecc1ced34ea6ae33718e63de
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.30.0/memos-0.30.0.tgz
+    version: 0.30.0
   - annotations:
       displayName: Memos
       status: stable
@@ -2337,6 +2476,24 @@ entries:
       displayName: SearXNG
       status: stable
     apiVersion: v2
+    appVersion: 2026.9.12-d4f00d15d
+    created: "2026-09-15T03:24:43.465007021Z"
+    description: SearXNG is a free internet metasearch engine which aggregates results
+      from various search services and databases.
+    digest: e4b275d2f3478d504b6d471dbe62fc1362798d1423fe609d93b769ad24a7709e
+    home: https://docs.searxng.org/
+    icon: https://avatars.githubusercontent.com/u/80454229?s=48&v=4
+    name: searxng
+    sources:
+    - https://github.com/searxng/searxng
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/searxng-2026.9.12-d4f00d15d/searxng-2026.9.12-d4f00d15d.tgz
+    version: 2026.9.12-d4f00d15d
+  - annotations:
+      displayName: SearXNG
+      status: stable
+    apiVersion: v2
     appVersion: 2026.5.15-240f403d9
     created: "2026-08-30T03:31:40.302173495Z"
     description: SearXNG is a free internet metasearch engine which aggregates results
@@ -2475,4 +2632,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-09-15T03:20:54.957441644Z"
+generated: "2026-09-15T03:24:43.465385755Z"
