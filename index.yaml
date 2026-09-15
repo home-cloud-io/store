@@ -407,6 +407,24 @@ entries:
       status: alpha
     apiVersion: v2
     appVersion: 2026.9.2
+    created: "2026-09-15T04:45:18.131498235Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: 49a3ebfef679c198e34bc2518c48bb2fbf096a84f84bf56d6cd0913a6ac12999
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-2026.9.3-0/home-assistant-2026.9.3-0.tgz
+    version: 2026.9.3-0
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
+    appVersion: 2026.9.2
     created: "2026-09-15T03:24:42.737087628Z"
     description: Open source home automation that puts local control and privacy first.
       Powered by a worldwide community of tinkerers and DIY enthusiasts.
@@ -773,6 +791,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
     version: 0.0.1
   immich:
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
+    appVersion: v3.2.0
+    created: "2026-09-15T04:45:18.324591068Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: bfb79be43141a70e80e8d4e35128e75c15b8950de7dd5500184fe4a12cc36a01
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-3.2.1-0/immich-3.2.1-0.tgz
+    version: 3.2.1-0
   - annotations:
       displayName: Immich
       status: stable
@@ -2673,4 +2714,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-09-15T04:18:35.009213271Z"
+generated: "2026-09-15T04:45:18.325044219Z"
