@@ -4,7 +4,7 @@ Mealie is an intuitive and easy to use recipe management app. It's designed to m
 
 #### How to Use
 
-After installing Mealie (it'll take a few minutes), go here to set up and use the app: http://recipes.local
+After installing Mealie (it'll take a few minutes), go here to set up and use the app: http://recipes.home-cloud.local
 
 There is also a read-only Android mobile app called Mealient:
 

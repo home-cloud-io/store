@@ -5,7 +5,7 @@ homeCloud:
         name: server
         port: 2283
       # an externally accessible route will be established enabling connection
-      # to the service (on port 2283) by going to http://photos.local
+      # to the service (on port 2283) by going to http://photos.home-cloud.local
 
   databases:
     - name: immich

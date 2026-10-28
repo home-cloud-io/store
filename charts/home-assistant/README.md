@@ -4,7 +4,7 @@ Open source home automation that puts local control and privacy first. Powered b
 
 #### How to Use
 
-After installing Home Assistant (it'll take a few minutes), go here to set up and use the app: http://home-assistant.local
+After installing Home Assistant (it'll take a few minutes), go here to set up and use the app: http://home-assistant.home-cloud.local
 
 Mobile app links:
 

@@ -26,7 +26,7 @@ spec:
           env:
             {{- with (first .Values.homeCloud.routes) }}
             - name: JELLYFIN_PublishedServerUrl
-              value: http://{{ .name }}.local
+              value: http://{{ .name }}.home-cloud.local
             {{- end }}
           volumeMounts:
             - mountPath: /config

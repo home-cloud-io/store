@@ -4,7 +4,7 @@ A privacy-first, lightweight note-taking service. Easily capture and share your 
 
 #### How to Use
 
-After installing Memos (it'll take a few minutes), go here to set up and use the app: http://memos.local
+After installing Memos (it'll take a few minutes), go here to set up and use the app: http://memos.home-cloud.local
 
 After initial set up, you can also install the mobile apps:
 

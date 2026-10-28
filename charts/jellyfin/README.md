@@ -4,7 +4,7 @@ Jellyfin is the volunteer-built media solution that puts you in control of your 
 
 #### How to Use
 
-After installing Jellyfin (it'll take a few minutes), go here to set up the app: http://movies.local
+After installing Jellyfin (it'll take a few minutes), go here to set up the app: http://movies.home-cloud.local
 
 Once you're done with that you can now install the mobile app and login to your new account.
 
