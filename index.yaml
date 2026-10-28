@@ -5,6 +5,24 @@ entries:
       displayName: File Browser
       status: alpha
     apiVersion: v2
+    appVersion: 1.5.8-stable
+    created: "2026-10-28T04:36:27.265280083Z"
+    description: The best free self-hosted web-based file manager with source configuration,
+      modern authentication, office support, and lightning-fast search.
+    digest: 8cc442d8ce9312eed405276b200ee90ea8cc29638f1e61b363c32cae26b71b3f
+    home: https://filebrowserquantum.com
+    icon: https://filebrowserquantum.com/logo.svg
+    name: filebrowser
+    sources:
+    - https://github.com/gtsteffaniak/filebrowser
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/filebrowser-1.5.8-stable-1/filebrowser-1.5.8-stable-1.tgz
+    version: 1.5.8-stable-1
+  - annotations:
+      displayName: File Browser
+      status: alpha
+    apiVersion: v2
     appVersion: 1.5.6-stable
     created: "2026-09-15T03:24:42.444670754Z"
     description: The best free self-hosted web-based file manager with source configuration,
@@ -402,6 +420,24 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/hello-world-0.0.2/hello-world-0.0.2.tgz
     version: 0.0.2
   home-assistant:
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
+    appVersion: 2026.10.4
+    created: "2026-10-28T04:36:27.513885041Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: 42b4953abb678a4913c609f8c1b2d72250859fa83f224ea5d215eba84885e6e0
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-2026.10.4-1/home-assistant-2026.10.4-1.tgz
+    version: 2026.10.4-1
   - annotations:
       displayName: Home Assistant
       status: alpha
@@ -809,6 +845,29 @@ entries:
     - https://github.com/home-cloud-io/store/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
     version: 0.0.1
   immich:
+  - annotations:
+      displayName: Immich
+      status: stable
+    apiVersion: v2
+    appVersion: v3.3.5
+    created: "2026-10-28T04:36:27.788061398Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Immich is a high performance self-hosted photo and video management
+      solution.
+    digest: 0b27ec97a4da03161db1b71ab2ff22bafe381a68fad2e00f5ca11be741ac68c6
+    home: https://immich.app/
+    icon: https://avatars.githubusercontent.com/u/109746326?s=48&v=4
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/immich-3.3.5-1/immich-3.3.5-1.tgz
+    version: 3.3.5-1
   - annotations:
       displayName: Immich
       status: stable
@@ -1825,6 +1884,28 @@ entries:
       displayName: Mealie
       status: stable
     apiVersion: v2
+    appVersion: v3.29.0
+    created: "2026-10-28T04:36:28.004586707Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: Mealie is an intuitive and easy to use recipe management app.
+    digest: e26d1ef144ad5d452217c6d94645bef45107c62a02eaeacd8c6ef919542f5fe8
+    home: https://mealie.io/
+    icon: https://avatars.githubusercontent.com/u/92342333?s=48&v=4
+    name: mealie
+    sources:
+    - https://github.com/mealie-recipes/mealie
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/mealie-3.29.0-1/mealie-3.29.0-1.tgz
+    version: 3.29.0-1
+  - annotations:
+      displayName: Mealie
+      status: stable
+    apiVersion: v2
     appVersion: v3.25.1
     created: "2026-09-15T03:24:43.173727131Z"
     dependencies:
@@ -2599,6 +2680,24 @@ entries:
       displayName: SearXNG
       status: stable
     apiVersion: v2
+    appVersion: 2026.10.27-b5ed73fcb
+    created: "2026-10-28T04:36:28.253223024Z"
+    description: SearXNG is a free internet metasearch engine which aggregates results
+      from various search services and databases.
+    digest: 080f801d60a7cf35bb7185287bd44a71c38da8bc8017a3cf4f4dc40273612dc0
+    home: https://docs.searxng.org/
+    icon: https://avatars.githubusercontent.com/u/80454229?s=48&v=4
+    name: searxng
+    sources:
+    - https://github.com/searxng/searxng
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/searxng-2026.10.27-b5ed73fcb-1/searxng-2026.10.27-b5ed73fcb-1.tgz
+    version: 2026.10.27-b5ed73fcb-1
+  - annotations:
+      displayName: SearXNG
+      status: stable
+    apiVersion: v2
     appVersion: 2026.9.12-d4f00d15d
     created: "2026-09-15T03:24:43.465007021Z"
     description: SearXNG is a free internet metasearch engine which aggregates results
@@ -2755,4 +2854,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-10-28T04:23:53.879347134Z"
+generated: "2026-10-28T04:36:28.253901101Z"
