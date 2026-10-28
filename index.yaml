@@ -406,6 +406,24 @@ entries:
       displayName: Home Assistant
       status: alpha
     apiVersion: v2
+    appVersion: 2026.10.4
+    created: "2026-10-28T04:23:53.654229657Z"
+    description: Open source home automation that puts local control and privacy first.
+      Powered by a worldwide community of tinkerers and DIY enthusiasts.
+    digest: ffcd4dc03261b73658df82e6454b2d5b37e4e4ae1f87be0107ac4d3fc26f71a4
+    home: https://www.home-assistant.io/
+    icon: https://avatars.githubusercontent.com/u/13844975?s=48&v=4
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/core
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/home-assistant-2026.10.4-0/home-assistant-2026.10.4-0.tgz
+    version: 2026.10.4-0
+  - annotations:
+      displayName: Home Assistant
+      status: alpha
+    apiVersion: v2
     appVersion: 2026.9.2
     created: "2026-09-15T04:45:18.131498235Z"
     description: Open source home automation that puts local control and privacy first.
@@ -2074,6 +2092,29 @@ entries:
       displayName: Memos
       status: stable
     apiVersion: v2
+    appVersion: 0.31.0
+    created: "2026-10-28T04:23:53.878769001Z"
+    dependencies:
+    - condition: homeCloud.dependencies.postgres.install
+      name: postgres
+      repository: https://apps.home-cloud.io
+      version: 0.x.x
+    description: A privacy-first, lightweight note-taking service. Easily capture
+      and share your great thoughts.
+    digest: de2060703ac5ee7ca01d33ea7f6f72b5bfe29a4b80814bfc843e5248d4a50d2e
+    home: https://www.usememos.com/
+    icon: https://avatars.githubusercontent.com/u/95764151?s=48&v=4
+    name: memos
+    sources:
+    - https://github.com/usememos/memos
+    type: application
+    urls:
+    - https://github.com/home-cloud-io/store/releases/download/memos-0.31.0-0/memos-0.31.0-0.tgz
+    version: 0.31.0-0
+  - annotations:
+      displayName: Memos
+      status: stable
+    apiVersion: v2
     appVersion: 0.30.0
     created: "2026-09-15T03:24:43.321560236Z"
     dependencies:
@@ -2714,4 +2755,4 @@ entries:
     urls:
     - https://github.com/home-cloud-io/store/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
-generated: "2026-09-15T04:45:18.325044219Z"
+generated: "2026-10-28T04:23:53.879347134Z"
