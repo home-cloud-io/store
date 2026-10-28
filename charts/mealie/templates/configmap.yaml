@@ -11,6 +11,6 @@ data:
   MAX_WORKERS: '1'
   WEB_CONCURRENCY: '1'
   {{- with (first .Values.homeCloud.routes) }}
-  BASE_URL: http://{{ .name }}.local
+  BASE_URL: http://{{ .name }}.home-cloud.local
   {{- end }}
   DB_ENGINE: postgres

@@ -4,14 +4,14 @@ Immich is a high performance self-hosted photo and video management solution. It
 
 #### How to Use
 
-After installing Immich (it'll take a few minutes), go here to set up the app: http://photos.local
+After installing Immich (it'll take a few minutes), go here to set up the app: http://photos.home-cloud.local
 
 Once you're done with that you can now install the mobile app and login to your new account.
 
 **NOTE**: When logging into your mobile app for the first time it will ask you for a "Server Endpoint URL". This will be:
 
 ```
-http://photos.local/api
+http://photos.home-cloud.local/api
 ```
 
 Mobile app links:

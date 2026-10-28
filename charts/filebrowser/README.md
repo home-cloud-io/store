@@ -4,4 +4,4 @@ FileBrowser Quantum provides an easy way to access and manage your files from th
 
 #### How to Use
 
-After installing File Browser, go here to set up the app: http://files.local
+After installing File Browser, go here to set up the app: http://files.home-cloud.local

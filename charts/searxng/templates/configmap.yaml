@@ -131,7 +131,7 @@ data:
       # public URL of the instance, to ensure correct inbound links. Is overwritten
       # by ${SEARXNG_URL}.
       {{- with (first .Values.homeCloud.routes) }}
-      base_url: http://{{ .name }}.local
+      base_url: http://{{ .name }}.home-cloud.local
       {{- end }}
       limiter: false  # rate limit the number of request on the instance, block some bots
 
